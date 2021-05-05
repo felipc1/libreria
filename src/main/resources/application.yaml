@@ -1,0 +1,13 @@
+server:
+    port: 8080
+spring:
+    profiles:
+        include: null
+    datasource:
+        driverClassName: "org.postgresql.Driver"
+    jpa:
+        databasePlatform: "org.hibernate.dialect.PostgreSQLDialect"
+aws:
+    region: "us-east-1"
+    secretManager:
+        secret-name: "ecopagosDBConection"
