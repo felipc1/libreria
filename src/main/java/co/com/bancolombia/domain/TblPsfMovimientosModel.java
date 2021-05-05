@@ -1,4 +1,4 @@
 package co.com.bancolombia.domain;
 
-public class Montos {
+public class TblPsfMovimientosModel {
 }
