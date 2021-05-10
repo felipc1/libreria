@@ -1,9 +1,9 @@
-package co.com.bancolombia.config;
+package co.com.bancolombia.ecopagos.config;
 
 import co.com.bancolombia.secretsmanager.api.GenericManager;
 import co.com.bancolombia.secretsmanager.connector.AWSSecretManagerConnector;
 import co.com.bancolombia.secretsmanager.model.AWSSecretDBModel;
-import co.com.bancolombia.utils.secrets.DBSecret;
+import co.com.bancolombia.ecopagos.utils.secrets.DBSecret;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -53,13 +53,12 @@ public class JpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, @Value("${spring.jpa.databasePlatform}") String dialect) {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("co.com.bancolombia.domain");
+        em.setPackagesToScan("co.com.bancolombia.ecopagos.domain");
 
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", dialect);
-        //properties.setProperty("hibernate.hbm2ddl.auto", "update");
         em.setJpaProperties(properties);
 
         return em;

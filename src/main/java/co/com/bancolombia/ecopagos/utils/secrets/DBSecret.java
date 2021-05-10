@@ -1,4 +1,4 @@
-package co.com.bancolombia.utils.secrets;
+package co.com.bancolombia.ecopagos.utils.secrets;
 
 import lombok.Builder;
 import lombok.Getter;

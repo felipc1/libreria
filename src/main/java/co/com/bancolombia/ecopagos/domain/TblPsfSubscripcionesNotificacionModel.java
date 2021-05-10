@@ -1,13 +1,13 @@
-package co.com.bancolombia.domain;
+package co.com.bancolombia.ecopagos.domain;
 
-import co.com.bancolombia.utils.Constants;
+import co.com.bancolombia.ecopagos.utils.Constants;
 import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.util.Date;
+
 @Data
 @Entity
 @Table(name = "tbl_psf_subscripciones_notificacion", schema = Constants.SCHEMA_DATABASE)
